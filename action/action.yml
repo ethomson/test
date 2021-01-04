@@ -1,0 +1,9 @@
+name: 'Test Action'
+description: 'This is a test action'
+author: 'Edward Thomson'
+runs:
+  using: 'node12'
+  main: 'index.js'
+branding:
+  icon: edit
+  color: blue
