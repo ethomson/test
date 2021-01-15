@@ -31,12 +31,16 @@ jobs:
 
   stage:
     runs-on: ubuntu-latest
+    environment:
+      name: staging
     steps:
       - name: Staging 
         run: echo Staged
  
   publish:
     runs-on: ubuntu-latest
+    environment:
+      name: prod
     steps:
       - name: Publish
         run: echo Published
