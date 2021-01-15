@@ -39,6 +39,7 @@ jobs:
  
   publish:
     runs-on: ubuntu-latest
+    needs: [ stage ]
     environment:
       name: prod
     steps:
