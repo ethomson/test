@@ -36,6 +36,7 @@ jobs:
         run: |
           echo Hello, world!
           env
+      - uses: ethomson/env-action@v1
 
   stage:
     runs-on: ubuntu-latest
