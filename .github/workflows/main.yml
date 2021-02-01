@@ -26,6 +26,9 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        asdf: [ BAR ]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -38,6 +41,8 @@ jobs:
           echo Hello, world!
           env
       - uses: ethomson/env-action@v1
+      - run: echo hi
+        if: ${{ matrix.asdf == env.foo }}
 
   stage:
     runs-on: ubuntu-latest
