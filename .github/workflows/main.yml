@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        asdf: [ BAR ]
+        asdf: [ BARz ]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
