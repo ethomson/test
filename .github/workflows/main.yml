@@ -43,6 +43,11 @@ jobs:
       - uses: ethomson/env-action@v1
       - run: echo hi
         if: ${{ matrix.asdf == env.foo }}
+      - run: echo 42 > data.txt
+      - uses: actions/upload-artifact@v2
+        with:
+          name: data
+          path: data.txt
 
   stage:
     runs-on: ubuntu-latest
@@ -50,7 +55,13 @@ jobs:
     environment:
       name: staging
     steps:
-      - name: Staging 
+      - uses: actions/download-artifact@v2
+        with:
+          name: data
+      - run: |
+          ls -FlasR
+          cat data.txt
+      - name: Staging
         run: echo Staged
  
   publish:
