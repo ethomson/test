@@ -16,5 +16,7 @@ jobs:
 
     steps:
       - run: |
+          echo "FOO=bar" >> $GITHUB_ENV
+          echo ${{ env.FOO }}
           echo "IMAGE=ghcr.io/${GITHUB_REPOSITORY}:${GITHUB_SHA}" >> $GITHUB_ENV
           echo ${{ env.IMAGE }}
