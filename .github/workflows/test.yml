@@ -1,17 +1,11 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Publish
+name: Test
 
 # Controls when the action will run. 
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
-env:
-  foo: BAR
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -21,9 +15,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Run a one-line script
-        run: |
-          echo ${{ env.foo }}
-          echo "BAR=foo" >> $GITHUB_ENV
-          echo ${{ env.foo}}
-          echo ${{ env.BAR }}
+      - run: |
+          echo "IMAGE=ghcr.io/${GITHUB_REPOSITORY}:${GITHUB_SHA}" >> $GITHUB_ENV
+          echo ${{ env.IMAGE }}
