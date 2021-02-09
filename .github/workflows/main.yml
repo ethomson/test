@@ -40,6 +40,7 @@ jobs:
         run: |
           echo Hello, world!
           env
+          dotnet --version
       - uses: ethomson/env-action@v1
       - run: echo hi
         if: ${{ matrix.asdf == env.foo }}
