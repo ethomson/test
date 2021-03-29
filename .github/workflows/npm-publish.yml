@@ -28,8 +28,9 @@ jobs:
   # Build and test this package across multiple node versions.
   build:
     runs-on: ubuntu-latest
-    strategy: matrix
-      node-version: [ '12.x', '14.x', '15.x' ]
+    strategy:
+      matrix:
+        node-version: ${{ env.build-node-versions }}
     steps:
       - uses: actions/checkout@v2
         with:
