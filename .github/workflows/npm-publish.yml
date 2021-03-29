@@ -18,19 +18,13 @@ on:
       publish:
         description: 'True to create a release and publish this to the registry (default: false)'
 
-env:
-  registry: 'npmjs.com'
-  build-node-versions: [ '12.x', '14.x', '15.x' ]
-  publish-node-version: '14'
-  token: ''
-
 jobs:
   # Build and test this package across multiple node versions.
   build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: ${{ env.build-node-versions }}
+        node-version: [ '12.x', '14.x', '15.x' ]
     steps:
       - uses: actions/checkout@v2
         with:
@@ -49,6 +43,7 @@ jobs:
     needs: [ build ]
     if: github.event.inputs.publish == 'true' || github.event_name == 'tag'
 
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         with:
@@ -62,7 +57,7 @@ jobs:
 
       - uses: actions/publish-npm@v1
         with:
-          registry: ${{ env.registry }} # registry to publish to; defaults to npmjs.com
-          token: ${{ env.token }}       # token to authenticate with; defaults to GITHUB_TOKEN
-          create-release: 'draft'       # true/false/draft (default to draft)
-          tag_name: ''                  # tag for the release, defaults to version number
+          registry: ''                         # registry to publish to; defaults to npmjs.com
+          token: '${{ secrets.GITHUB_TOKEN }}' # token to authenticate with; defaults to GITHUB_TOKEN
+          create-release: 'draft'              # true/false/draft (default to draft)
+          tag_name: ''                         # tag for the release, defaults to version number
