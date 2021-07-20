@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: pwsh
 
 # Controls when the workflow will run
 on:
@@ -29,5 +29,6 @@ jobs:
       - name: Run a one-line script
         shell: pwsh
         run: |
+          echo ${{ github }}
           $github = ConvertFrom-Json '${{ github }}'
           echo $github
