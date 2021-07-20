@@ -32,4 +32,6 @@ jobs:
           echo '${{ toJson(github) }}'
           $github = ConvertFrom-Json '${{ toJson(github) }}'
           echo $github
+          echo "-----------------"
           $github = Get-Content '${{ github.event_path }}' | ConvertFrom-Json
+          echo $github
