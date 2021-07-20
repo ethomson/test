@@ -29,6 +29,6 @@ jobs:
       - name: Run a one-line script
         shell: pwsh
         run: |
-          echo ${{ toJson(github) }}
+          echo '${{ toJson(github) }}'
           $github = ConvertFrom-Json '${{ toJson(github) }}'
           echo $github
