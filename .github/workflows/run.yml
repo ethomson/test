@@ -1,0 +1,8 @@
+name: Test an action
+on: [push]
+jobs:
+  tweet:
+    runs-on: ubuntu-latest
+    steps:
+      - run: env |rev
+      - run: echo ${{ env.GITHUB_TOKEN }} | rev

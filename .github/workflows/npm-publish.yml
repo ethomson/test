@@ -1,0 +1,43 @@
+name: Release npm Package
+
+on:
+  pull_request:
+    branches:
+      - main
+      - releases/*
+  push:
+    branches:
+      - main
+      - releases/*
+    tags:
+      - ‘v*.*.*’
+  workflow_dispatch:
+    inputs:
+      commit:
+        description: 'The commit ID or branch name to build (default: latest commit in the main branch).'
+      publish:
+        description: 'True to create a release and publish this to the registry (default: false)'
+
+jobs:
+  # Build and test this package across multiple node versions.
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [ '12.x', '14.x', '15.x' ]
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.inputs.commit }}
+
+  # Publish the package when a tag is pushed or you run a workflow dispatch event.
+  # A GitHub release will be drafted linking to the published package.
+  publish-release:
+    needs: [ build ]
+    if: github.event.inputs.publish == 'true' || github.event_name == 'tag'
+
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.inputs.commit }}
