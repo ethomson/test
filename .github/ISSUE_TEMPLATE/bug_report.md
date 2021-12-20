@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: Create a report to help us improve
+about: Report a bug in the software in this repository.  Please use this only for bugs in this application; if you have issues with GitHub Actions, please follow the "Support for GitHub Actions" link, below.
 title: ''
 labels: bug
 assignees: ''
