@@ -1,6 +1,6 @@
 ---
 name: 🛑 Report a bug in the runner application
-about: If you have issues with GitHub Actions, please follow the "Support for GitHub Actions" link, below.
+about: If you have issues with GitHub Actions, please follow the "support for GitHub Actions" link, below.
 title: ''
 labels: bug
 assignees: ''
