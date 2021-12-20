@@ -1,6 +1,6 @@
 ---
-name: Report a bug in the runner application
-about: 🛑 Please use this only for bugs in this application; if you have issues with GitHub Actions, please follow the "Support for GitHub Actions" link, below.
+name: 🛑 Report a bug in the runner application
+about: If you have issues with GitHub Actions, please follow the "Support for GitHub Actions" link, below.
 title: ''
 labels: bug
 assignees: ''
