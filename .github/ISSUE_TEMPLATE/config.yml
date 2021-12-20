@@ -1,9 +1,9 @@
 blank_issues_enabled: false
 contact_links:
-  - name: GitHub Community Support
+  - name: Support for GitHub Actions
     url: https://github.community/c/code-to-cloud/52
     about: If you have questions about GitHub Actions or need support writing workflows, please ask in the GitHub Community Support forum.
-  - name: GitHub Actions Feedback
+  - name: Feedback and suggestions for GitHub Actions
     url: https://github.com/github/feedback/discussions/categories/actions-and-packages-feedback
     about: If you have feedback or suggestions about GitHub Actions, please open a discussion (or add to an existing one) in the GitHub Actions Feedback.  GitHub Actions Product Managers and Engineers monitor the feedback forum.
   - name: Report runner application bug
