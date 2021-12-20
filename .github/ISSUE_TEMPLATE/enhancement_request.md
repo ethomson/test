@@ -1,6 +1,6 @@
 ---
 name: Request a feature in the runner application
-about: Request a new feature in this application.  Please use this only if you're sure that this is a runner feature; if you have feature requests for GitHub Actions, please use the "feedback and suggestions for GitHub Actions" link below.
+about: Request a new feature in this application.  If you have feature requests for GitHub Actions, please use the "feedback and suggestions for GitHub Actions" link below.
 title: ''
 labels: enhancement
 assignees: ''
