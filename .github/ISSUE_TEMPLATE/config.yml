@@ -7,8 +7,11 @@ contact_links:
     url: https://github.com/github/feedback/discussions/categories/actions-and-packages-feedback
     about: If you have feedback or suggestions about GitHub Actions, please open a discussion (or add to an existing one) in the GitHub Actions Feedback.  GitHub Actions Product Managers and Engineers monitor the feedback forum.
   - name: Report runner application bug
-    url: https://github.com/actions/runner/issues/new
+    url: https://github.com/actions/runner/issues/new?assignees=&labels=bug&template=bug_report.md&title=
     about: Report a bug in the runner application
+  - name: Feature request for this application
+    url: https://github.com/actions/runner/issues/new?assignees=&labels=enhancement&template=enhancement_request.md&title=
+    about: Request a new feature in this application
   - name: GitHub Security Bug Bounty
     url: https://bounty.github.com/
     about: Please report security vulnerabilities here.
