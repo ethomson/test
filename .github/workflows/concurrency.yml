@@ -1,0 +1,60 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Concurrent
+
+# Controls when the workflow will run
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  one:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    concurrency: foobar42
+    steps:
+      - run: echo hi && sleep 10
+  two:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    concurrency: foobar42
+    steps:
+      - run: echo hi && sleep 10
+  three:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    concurrency: foobar42
+    steps:
+      - run: echo hi && sleep 10
+  four:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    concurrency: foobar42
+    steps:
+      - run: echo hi && sleep 10
+  five:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    concurrency: foobar42
+    steps:
+      - run: echo hi && sleep 10
+  six:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    concurrency: foobar42
+    steps:
+      - run: echo hi && sleep 10
+  seven:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    concurrency: foobar42
+    steps:
+      - run: echo hi && sleep 10
+  eight:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    concurrency: foobar42
+    steps:
+      - run: echo hi && sleep 10
