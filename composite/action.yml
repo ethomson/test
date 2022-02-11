@@ -17,5 +17,7 @@ runs:
     - id: random-number-generator
       run: echo "::set-output name=random-id::$(echo $RANDOM)"
       shell: bash
+    - id: test
+      run: echo "::set-output name=test::foobar"
     - run: ${{ github.action_path }}/goodbye.sh
       shell: bash
