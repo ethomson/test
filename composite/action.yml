@@ -20,5 +20,3 @@ runs:
     - id: test
       run: echo "::set-output name=test::foobar"
       shell: bash
-    - run: ${{ github.action_path }}/goodbye.sh
-      shell: bash
