@@ -1,15 +1,10 @@
 on: [push]
 jobs:
   hello_world_job:
-    runs-on: ubuntu-latest
-    name: A job to say hello
+    strategy:
+      matrix:
+        os: [ windows-2016, windows-2019, windows-2022 ]
+    runs-on: ${{ matrix.os }}
+    name: Git version
     steps:
-      - uses: actions/checkout@v2
-      - id: foo
-        uses: ./composite
-        with:
-          who-to-greet: 'Mona the Octocat'
-      - run: echo random-number ${{ steps.foo.outputs.random-number }}
-        shell: bash
-      - run: echo test ${{ steps.foo.outputs.test }}
-        shell: bash
+      - run: git --version
