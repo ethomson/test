@@ -16,3 +16,5 @@ jobs:
     steps:
       - name: Hello
         run: echo Hello, world!
+      - name: env
+        run: env
